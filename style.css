@@ -19,7 +19,7 @@ body {
     display: flex;
     margin-left: 30px;
 }
-.createdShedule {
+.row {
     width: 50%;
     height: 100px;
     margin: 0 auto;
@@ -27,13 +27,18 @@ body {
     justify-content: center;
     align-items: center;
 }
+.wrong {
+    color: red;
+    margin-left: 40%;
+    display: none;
+}
 .submit {
     width: 100%;
     display: flex;
     justify-content: center;
     margin-top: 50px;
 }
-.button-submit {
+.submit-button {
     width: 200px;
     height: 40px;
     border: 2px solid #f24c62;
@@ -45,7 +50,7 @@ body {
     font-weight: bold;
     cursor: pointer;
 }
-.button-submit:focus {
+.submit-button:focus {
     outline: none;
 }
 .input-times {
@@ -72,7 +77,7 @@ input::placeholder {
     font-size: 17px;
     font-weight: bold;
 }
-.check {
+.checkbox {
     margin-left: 4px;
 }
 .remove {

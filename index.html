@@ -3,65 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rest</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Andika+New+Basic&family=Oxanium:wght@200&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="createShedule" onclick="myFunction()">Add times +</div>
+    <div class="createShedule" onclick="addNewRow()">Add times +</div>
 
-    <div class="createdShedule">
+    <div class="container" id="container">
 
-        <div class="times">
-            <img src="photo/edit-copy-3_2020-12-09/edit-copy-3.png" alt="">
-            <input type="text" placeholder="from" class="input-times">-
-            <img src="photo/edit-copy-3_2020-12-09/edit-copy-3.png" alt="">
-            <input type="text" placeholder="to" class="input-times">
+        <div id="rowItem_1" class="row">
+
+            <div class="times">
+                <img src="photo/edit-copy-3_2020-12-09/edit-copy-3.png" alt="">
+                <input type="text" placeholder="from" class="input-times from" onchange="checkInput(this)" value="">-
+                <img src="photo/edit-copy-3_2020-12-09/edit-copy-3.png" alt="">
+                <input type="text" placeholder="to" class="input-times to" onchange="checkInput(this)" value="">
+                <div class="wrong">wrong</div>
+            </div>
+
+            <div class="days">
+
+                <div class="days-input">
+                    <div class="monday">Mo</div>
+                    <input type="checkbox" class="checkbox" name="days[]" value="0" onchange="onCheckboxChange(this)"> 
+                </div>
+
+                <div class="days-input">
+                    <div class="tuesday">Tu</div>
+                    <input type="checkbox" class="checkbox" name="days[]" value="1" onchange="onCheckboxChange(this)">
+                </div>
+
+                <div class="days-input">
+                    <div class="wednesday">We</div>
+                    <input type="checkbox" class="checkbox" name="days[]" value="2" onchange="onCheckboxChange(this)">
+                </div> 
+
+                <div class="days-input">
+                    <div class="thursday">Th</div>
+                    <input type="checkbox" class="checkbox" name="days[]" value="3" onchange="onCheckboxChange(this)">
+                </div>
+
+                <div class="days-input">
+                    <div class="friday">Fr</div>
+                    <input type="checkbox" class="checkbox" name="days[]" value="4" onchange="onCheckboxChange(this)">
+                </div>
+
+                <div class="days-input">
+                    <div class="saturday">Sa</div>
+                    <input type="checkbox" class="checkbox" name="days[]" value="5" onchange="onCheckboxChange(this)">
+                </div>
+
+                <div class="days-input">
+                    <div class="sunday">Su</div>
+                    <input type="checkbox" class="checkbox" name="days[]" value="6" onchange="onCheckboxChange(this)">
+                </div>
+            </div>
         </div>
 
-        <div class="days">
-
-            <div class="days-input">
-                <div class="monday">Mo</div>
-                <input type="checkbox" class="check">
-            </div>
-
-            <div class="days-input">
-                <div class="tuesday">Tu</div>
-                <input type="checkbox" class="check">
-            </div>
-
-            <div class="days-input">
-                <div class="wednesday">We</div>
-                <input type="checkbox" class="check">
-            </div> 
-
-            <div class="days-input">
-                <div class="thursday">Th</div>
-                <input type="checkbox" class="check">
-            </div>
-
-            <div class="days-input">
-                <div class="friday">Fr</div>
-                 <input type="checkbox" class="check">
-            </div>
-
-            <div class="days-input">
-                <div class="saturday">Sa</div>
-                <input type="checkbox" class="check">
-            </div>
-
-            <div class="days-input">
-                <div class="sunday">Su</div>
-                <input type="checkbox" class="check">
-            </div>
-        </div>
     </div>
 
-    <div class="dex"></div>
-
     <div class="submit">
-        <button class="button-submit">Submit</button>
+        <button class="submit-button" onclick="onSubmit()">Submit</button>
     </div>
 
     <script src="main.js"></script>
